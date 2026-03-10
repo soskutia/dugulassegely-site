@@ -1,0 +1,88 @@
+---
+import { benefits } from '../data/benefits';
+---
+
+<section
+  id="miert-mi"
+  class="border-b border-slate-800 bg-[#020617]"
+  aria-labelledby="miert-mi-heading"
+>
+  <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+    <header class="mb-8 space-y-2 text-center">
+      <h2
+        id="miert-mi-heading"
+        class="text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl"
+      >
+        Miért engem válasszon?
+      </h2>
+      <p class="mx-auto max-w-2xl text-sm text-slate-300">
+        Duguláselhárításnál számít, ki érkezik a helyszínre.<br>Kovács Róbert vagyok, duguláselhárító
+        szakember – gyors reakcióidővel, tiszta munkavégzéssel és előre kiszámítható költségekkel
+        dolgozom.
+      </p>
+    </header>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      {benefits.map((benefit) => (
+        <article
+          class="flex gap-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-sm text-slate-200 shadow-[0_16px_40px_rgba(15,23,42,0.8)]"
+        >
+          <div
+            class="mt-1 flex h-9 w-9 flex-none items-center justify-center rounded-full bg-gradient-to-br from-[#1E3A8A] via-[#2563EB] to-[#38BDF8] text-base text-slate-50"
+            aria-hidden="true"
+          >
+            {benefit.id === 'gyors-kiszallas' && '⚡'}
+            {benefit.id === 'gepesitett-megoldasok' && '🛠️'}
+            {benefit.id === 'tiszta-munkavegzes' && '🧼'}
+            {benefit.id === 'atlathato-arazas' && '📄'}
+          </div>
+          <div class="space-y-1">
+            <h3 class="text-sm font-semibold text-slate-50">
+              {benefit.title}
+            </h3>
+            <p class="text-sm text-slate-300">
+              {benefit.description}
+            </p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div
+      id="velemenyek"
+      class="mt-10 rounded-2xl border border-slate-800 bg-slate-900/80 p-5 text-sm text-slate-200"
+    >
+      <div class="mb-3 flex items-center justify-between gap-4">
+        <h3 class="text-sm font-semibold text-slate-50">
+          Ügyfeleim mondták
+        </h3>
+        <div class="flex items-center gap-1 text-xs text-amber-300">
+          <span class="font-semibold">4.9</span>
+          <span class="text-amber-200">★</span>
+          <span class="text-slate-400">/ 5</span>
+        </div>
+      </div>
+      <div class="grid gap-4 md:grid-cols-2">
+        <figure class="rounded-xl border border-slate-800 bg-slate-900/90 p-4">
+          <blockquote class="text-sm text-slate-200">
+            „Este 10-kor hívtuk Róbertet, a teljesen eldugult WC miatt. Egy órán belül kiért és bontás nélkül
+            megoldotta, mindenről előre tájékoztatott.”
+          </blockquote>
+          <figcaption class="mt-2 text-xs text-slate-400">
+            – Zsolt, X. kerület
+          </figcaption>
+        </figure>
+        <figure class="rounded-xl border border-slate-800 bg-slate-900/90 p-4">
+          <blockquote class="text-sm text-slate-200">
+            „Precíz, tiszta munka, a lépcsőházban sem hagyott koszt maga után. A végösszeg pontosan
+            annyi volt, mint amennyit telefonban mondott.”
+          </blockquote>
+          <figcaption class="mt-2 text-xs text-slate-400">
+            – Kovács család, társasház, XI. kerület
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+

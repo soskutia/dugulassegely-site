@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ImpresszumContent from '../components/legal/ImpresszumContent.astro';
+---
+
+<BaseLayout
+  title="Impresszum – DugulásSegély duguláselhárítás"
+  description="Üzemeltetői adatok, elérhetőségek és céginformációk a dugulassegely.hu weboldalhoz."
+  canonical="https://dugulassegely.hu/impresszum/"
+>
+  <section class="border-b border-slate-800 bg-[#020617]">
+    <div class="mx-auto max-w-4xl px-4 py-12 md:py-16 text-sm text-slate-300">
+      <h1 class="text-3xl font-semibold tracking-tight text-slate-50 md:text-4xl">
+        Impresszum
+      </h1>
+      <ImpresszumContent />
+    </div>
+  </section>
+</BaseLayout>
+

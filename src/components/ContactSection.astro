@@ -1,0 +1,300 @@
+---
+---
+
+<section
+  id="kapcsolat"
+  class="border-b border-slate-800 bg-[#020617]"
+  aria-labelledby="kapcsolat-heading"
+>
+  <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+    <div
+      class="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-start"
+    >
+      <div class="space-y-4">
+        <h2
+          id="kapcsolat-heading"
+          class="text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl"
+        >
+          Kérjen visszahívást vagy ajánlatot
+        </h2>
+        <p class="text-sm text-slate-300">
+          Írja le röviden a problémát, és visszahívom. Minél pontosabb információt ad, annál
+          gyorsabban és pontosabban tudok segíteni.
+        </p>
+        <ul class="space-y-1 text-sm text-slate-300">
+          <li>
+            • Röviden írja le, hol jelentkezik a dugulás (WC, mosogató, fürdő, pince).
+          </li>
+          <li>• Ha tudja, írja meg, mikor kezdődött a probléma.</li>
+          <li>
+            • Ha már próbált valamit (pumpa, vegyszer), azt is érdemes megemlíteni.
+          </li>
+        </ul>
+        <p class="text-xs text-slate-500">
+          A kapcsolatfelvételi űrlap a Web3Forms szolgáltatást használja. Az adatok kezelését az
+          Adatkezelési tájékoztató részletezi.
+        </p>
+      </div>
+
+      <div
+        class="rounded-2xl border border-slate-800 bg-slate-900/80 p-5 shadow-[0_16px_40px_rgba(15,23,42,0.9)]"
+      >
+        <form
+          id="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="space-y-4"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="2914e4e1-6305-4499-9a09-263b967a638b"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="Új üzenet a DugulásSegély weboldalról"
+          />
+          <input
+            type="hidden"
+            name="from_name"
+            value="DugulásSegély weboldal űrlap"
+          />
+
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <div class="grid gap-4 md:grid-cols-2">
+            <div class="space-y-1">
+              <label
+                for="name"
+                class="block text-xs font-medium uppercase tracking-[0.16em] text-slate-300"
+              >
+                Név
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                autocomplete="name"
+                class="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-[#2563EB]"
+                placeholder="Teljes neve"
+              />
+            </div>
+            <div class="space-y-1">
+              <label
+                for="phone"
+                class="block text-xs font-medium uppercase tracking-[0.16em] text-slate-300"
+              >
+                Telefon
+              </label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+                autocomplete="tel"
+                class="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-[#2563EB]"
+                placeholder="+36…"
+              />
+            </div>
+          </div>
+
+          <div class="space-y-1">
+            <label
+              for="email"
+              class="block text-xs font-medium uppercase tracking-[0.16em] text-slate-300"
+            >
+              E-mail
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              class="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-[#2563EB]"
+              placeholder="nev@email.hu"
+            />
+          </div>
+
+          <div class="space-y-1">
+            <label
+              for="message"
+              class="block text-xs font-medium uppercase tracking-[0.16em] text-slate-300"
+            >
+              Üzenet
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="4"
+              class="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-[#2563EB]"
+              placeholder="Röviden írja le a problémát és a címet (kerület, utca)..."
+            ></textarea>
+          </div>
+
+          <div class="space-y-1 text-[0.7rem] text-slate-500">
+            <div class="flex items-start gap-2">
+              <input
+                id="terms"
+                name="terms"
+                type="checkbox"
+                required
+                class="mt-0.5 h-3.5 w-3.5 rounded border-slate-600 bg-slate-900 text-[#2563EB]"
+              />
+              <label for="terms" class="leading-snug">
+                Elfogadom az{" "}
+                <a
+                  href="/adatkezeles"
+                  class="text-[#2563EB] hover:text-[#60A5FA] underline underline-offset-2"
+                >
+                  Adatkezelési tájékoztatót
+                </a>{" "}
+                és a{" "}
+                <a
+                  href="/felhasznalasi-feltetelek"
+                  class="text-[#2563EB] hover:text-[#60A5FA] underline underline-offset-2"
+                >
+                  Felhasználási feltételeket
+                </a>
+                .
+              </label>
+            </div>
+            <p>
+              Az üzenetet kizárólag a visszahíváshoz és az ajánlatadás előkészítéséhez használom
+              fel.
+            </p>
+          </div>
+
+          <p
+            id="contact-status"
+            class="mt-1 text-xs text-slate-400"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <button
+            id="contact-submit"
+            type="submit"
+            class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-slate-600 bg-slate-900/60 px-5 py-3 text-[0.78rem] font-medium uppercase tracking-[0.16em] text-slate-100 transition hover:border-slate-400"
+          >
+            <span aria-hidden="true" class="flex h-5 w-5 items-center justify-center">
+              <svg
+                viewBox="0 0 24 24"
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2Z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </span>
+            <span>Küldés</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="contact-success"
+    class="fixed inset-0 z-40 hidden items-center justify-center bg-black/70 px-4"
+  >
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contact-success-title"
+      class="max-w-sm rounded-2xl border border-emerald-500/40 bg-slate-900 p-5 text-sm text-slate-100 shadow-[0_24px_60px_rgba(0,0,0,0.7)]"
+    >
+      <h2
+        id="contact-success-title"
+        class="mb-2 text-base font-semibold text-emerald-300"
+      >
+        Köszönöm a megkeresést!
+      </h2>
+      <p class="text-sm text-slate-200">
+        Az üzenet megérkezett, hamarosan visszahívom a megadott telefonszámon.
+      </p>
+      <button
+        type="button"
+        id="contact-success-close"
+        class="mt-4 inline-flex items-center justify-center rounded-full border border-slate-600 bg-slate-900/60 px-4 py-2 text-xs font-medium uppercase tracking-[0.16em] text-slate-100 hover:border-slate-400"
+      >
+        Rendben
+      </button>
+    </div>
+  </div>
+
+  <script is:inline>
+    if (typeof window !== 'undefined') {
+      const form = document.querySelector('#contact-form');
+      const statusEl = document.querySelector('#contact-status');
+      const submitBtn = document.querySelector('#contact-submit');
+      const successModal = document.querySelector('#contact-success');
+      const successClose = document.querySelector('#contact-success-close');
+
+      if (form && statusEl && submitBtn) {
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+
+          statusEl.textContent = 'Küldés folyamatban...';
+          statusEl.className = 'mt-1 text-xs text-slate-400';
+          submitBtn.disabled = true;
+          submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+          const formData = new FormData(form);
+
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: formData
+            });
+            const data = await response.json().catch(() => null);
+
+            if (response.ok && data && data.success) {
+              statusEl.textContent = 'Elküldve. Hamarosan visszahívom.';
+              statusEl.className = 'mt-1 text-xs text-emerald-400';
+              form.reset();
+              const terms = document.querySelector('#terms');
+              if (terms) {
+                terms.checked = false;
+              }
+              if (successModal) {
+                successModal.classList.remove('hidden');
+                successModal.classList.add('flex');
+              }
+            } else {
+              throw new Error('submit-failed');
+            }
+          } catch (error) {
+            statusEl.textContent =
+              'Sikertelen küldés. Kérem, próbálja meg újra, vagy hívjon telefonon.';
+            statusEl.className = 'mt-1 text-xs text-red-400';
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+          }
+        });
+      }
+
+      if (successModal && successClose) {
+        successClose.addEventListener('click', () => {
+          successModal.classList.add('hidden');
+          successModal.classList.remove('flex');
+        });
+      }
+    }
+  </script>
+</section>
+
