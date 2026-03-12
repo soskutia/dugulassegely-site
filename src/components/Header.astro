@@ -1,8 +1,10 @@
 ---
-import BrandLogo from './BrandLogo.astro';
+
 ---
 
-<header class="sticky top-0 z-40 border-b border-slate-800 bg-[#020617]/90 backdrop-blur">
+<header
+  class="sticky top-0 z-40 border-b border-[var(--ds-border-soft)] bg-white/90 backdrop-blur shadow-[0_3px_12px_rgba(15,23,42,0.05)]"
+>
   <div class="mx-auto max-w-6xl px-4">
     <input
       id="main-nav-toggle"
@@ -13,25 +15,53 @@ import BrandLogo from './BrandLogo.astro';
     />
 
     <div class="flex h-16 items-center justify-between gap-3">
-      <BrandLogo />
+      <a href="/" class="ds-logo" aria-label="Dugulássegély – Főoldal">
+        <img
+          src="/images/logo/dugulassegely-logo.png"
+          alt="Dugulássegély – Duguláselhárítás 0–24"
+          class="ds-logo-image" width="636" height="397"
+          loading="eager"
+          decoding="async"
+        />
+
+        <span class="ds-logo-text">
+          <span class="ds-brand">DUGULÁSSEGÉLY</span>
+          <span class="ds-tagline">Duguláselhárítás 0–24</span>
+        </span>
+      </a>
 
       <nav
-        class="hidden items-center gap-8 text-sm font-medium text-slate-200 md:flex"
+        class="hidden items-center gap-8 text-sm font-medium text-[var(--ds-text-primary)] md:flex"
         aria-label="Fő navigáció"
       >
-        <a href="#szolgaltatasok" class="transition-colors hover:text-[#2563EB]">
+        <a
+          href="#szolgaltatasok"
+          class="transition-colors hover:text-[var(--ds-primary)]"
+        >
           Szolgáltatások
         </a>
-        <a href="#miert-mi" class="transition-colors hover:text-[#2563EB]">
+        <a
+          href="#mierten"
+          class="transition-colors hover:text-[var(--ds-primary)]"
+        >
           Miért én
         </a>
-        <a href="#velemenyek" class="transition-colors hover:text-[#2563EB]">
+        <a
+          href="#velemenyek"
+          class="transition-colors hover:text-[var(--ds-primary)]"
+        >
           Vélemények
         </a>
-        <a href="#gyik" class="transition-colors hover:text-[#2563EB]">
+        <a
+          href="#gyik"
+          class="transition-colors hover:text-[var(--ds-primary)]"
+        >
           GYIK
         </a>
-        <a href="#kapcsolat" class="transition-colors hover:text-[#2563EB]">
+        <a
+          href="#kapcsolat"
+          class="transition-colors hover:text-[var(--ds-primary)]"
+        >
           Kapcsolat
         </a>
       </nav>
@@ -39,10 +69,13 @@ import BrandLogo from './BrandLogo.astro';
       <div class="flex items-center gap-3 md:gap-4">
         <a
           href="tel:+36305382048"
-          class="inline-flex items-center gap-2 rounded-full bg-[#EF4444] px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-white shadow-[0_10px_30px_rgba(248,113,113,0.45)] transition hover:bg-[#DC2626]"
+          class="ds-focus-ring inline-flex items-center gap-2 rounded-full bg-[var(--ds-primary)] px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-white shadow-[0_12px_30px_rgba(37,99,235,0.28)] transition hover:bg-[var(--ds-primary-hover)] active:translate-y-[1px]"
           aria-label="Azonnali hívás a DugulásSegély szerelőjének"
         >
-          <span aria-hidden="true" class="flex h-4 w-4 items-center justify-center">
+          <span
+            aria-hidden="true"
+            class="flex h-4 w-4 items-center justify-center"
+          >
             <svg
               viewBox="0 0 24 24"
               class="h-3.5 w-3.5"
@@ -52,15 +85,17 @@ import BrandLogo from './BrandLogo.astro';
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.37 1.77.72 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.24a2 2 0 0 1 2.11-.45c.83.35 1.7.6 2.6.72A2 2 0 0 1 22 16.92Z" />
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.37 1.77.72 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.24a2 2 0 0 1 2.11-.45c.83.35 1.7.6 2.6.72A2 2 0 0 1 22 16.92Z"
+              ></path>
             </svg>
           </span>
-          <span>Hívás most</span>
+          <span>Hívás</span>
         </a>
 
         <label
           for="main-nav-toggle"
-          class="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-slate-700/70 bg-slate-900/60 text-slate-200 shadow-sm ring-0 transition hover:border-slate-500/80 md:hidden"
+          class="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-[var(--ds-border-subtle)] bg-white text-[var(--ds-text-primary)] shadow-sm ring-0 transition hover:border-[var(--ds-border-soft)] md:hidden"
           aria-label="Navigációs menü megnyitása"
         >
           <span class="flex flex-col gap-[5px]">
@@ -73,24 +108,39 @@ import BrandLogo from './BrandLogo.astro';
     </div>
 
     <nav
-      class="grid grid-rows-[0fr] border-t border-slate-800/60 text-sm text-slate-200 transition-[grid-template-rows] duration-200 ease-out peer-checked:grid-rows-[1fr] md:hidden"
+      class="grid grid-rows-[0fr] border-t border-[var(--ds-border-soft)] bg-white text-sm text-[var(--ds-text-primary)] transition-[grid-template-rows] duration-200 ease-out peer-checked:grid-rows-[1fr] md:hidden"
       aria-label="Fő navigáció mobil"
     >
       <div class="overflow-hidden">
         <div class="flex flex-col gap-2 py-3 text-sm font-medium">
-          <a href="#szolgaltatasok" class="rounded-lg px-1 py-1.5 hover:text-[#2563EB]">
+          <a
+            href="#szolgaltatasok"
+            class="rounded-lg px-1 py-1.5 hover:text-[var(--ds-primary)]"
+          >
             Szolgáltatások
           </a>
-          <a href="#miert-mi" class="rounded-lg px-1 py-1.5 hover:text-[#2563EB]">
+          <a
+            href="#mierten"
+            class="rounded-lg px-1 py-1.5 hover:text-[var(--ds-primary)]"
+          >
             Miért mi
           </a>
-          <a href="#velemenyek" class="rounded-lg px-1 py-1.5 hover:text-[#2563EB]">
+          <a
+            href="#velemenyek"
+            class="rounded-lg px-1 py-1.5 hover:text-[var(--ds-primary)]"
+          >
             Vélemények
           </a>
-          <a href="#gyik" class="rounded-lg px-1 py-1.5 hover:text-[#2563EB]">
+          <a
+            href="#gyik"
+            class="rounded-lg px-1 py-1.5 hover:text-[var(--ds-primary)]"
+          >
             GYIK
           </a>
-          <a href="#kapcsolat" class="rounded-lg px-1 py-1.5 hover:text-[#2563EB]">
+          <a
+            href="#kapcsolat"
+            class="rounded-lg px-1 py-1.5 hover:text-[var(--ds-primary)]"
+          >
             Kapcsolat
           </a>
         </div>

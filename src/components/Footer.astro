@@ -6,7 +6,7 @@ import CookieContent from './legal/CookieContent.astro';
 import FelhasznalasContent from './legal/FelhasznalasContent.astro';
 ---
 
-<footer class="border-t border-slate-800 bg-[#020617]">
+<footer class="border-t border-slate-800 bg-[var(--ds-footer-bg)]">
   <div
     class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 text-sm text-slate-300 md:flex-row md:items-start md:justify-between"
   >
@@ -17,7 +17,7 @@ import FelhasznalasContent from './legal/FelhasznalasContent.astro';
       <p class="mt-1 text-sm text-slate-400">
         Gyors, tiszta duguláselhárítás Budapesten és környékén, fix áron.
       </p>
-      <p class="mt-2 text-xs text-slate-500">
+      <p class="mt-2 text-xs text-slate-400">
         © {new Date().getFullYear()} DugulásSegély. Minden jog fenntartva.
       </p>
     </div>
@@ -34,11 +34,11 @@ import FelhasznalasContent from './legal/FelhasznalasContent.astro';
           info@dugulassegely.hu
         </a>
       </div>
-      <div class="text-xs text-slate-500">
+      <div class="text-xs text-slate-400">
         Szolgáltatási terület: Budapest és 30 km-es körzete.
       </div>
     </div>
-    <nav class="text-xs text-slate-500" aria-label="Jogi információk">
+    <nav class="text-xs text-slate-900" aria-label="Jogi információk">
       <ul class="space-y-1">
         <li>
           <LegalModalLink id="impresszum" title="Impresszum">
@@ -64,4 +64,3 @@ import FelhasznalasContent from './legal/FelhasznalasContent.astro';
     </nav>
   </div>
 </footer>
-

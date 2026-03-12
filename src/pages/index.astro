@@ -7,14 +7,15 @@ import WhyUs from '../components/WhyUs.astro';
 import WorkGallery from '../components/WorkGallery.astro';
 import FaqSection from '../components/FaqSection.astro';
 import ContactSection from '../components/ContactSection.astro';
+import BusinessInfoSection from '../components/BusinessInfoSection.astro';
 import { services } from '../data/services';
 import { galleryItems } from '../data/gallery';
 import { faqs } from '../data/faqs';
 ---
 
 <BaseLayout
-  title="DugulásSegély – Duguláselhárítás 0–24 Budapesten és környékén"
-  description="Duguláselhárítás falbontás nélkül Budapesten és 30 km-es körzetében. WC, mosogató és csatorna tisztítás, sürgősségi kiszállás 0–24, átlátható árakkal."
+  title="DugulásSegély – Duguláselhárítás 0-24 Budapesten és környékén"
+  description="Duguláselhárítás falbontás nélkül Budapesten és 30 km-es körzetében. WC, mosogató és csatorna tisztítás, sürgősségi kiszállás 0-24, átlátható árakkal."
   canonical="https://dugulassegely.hu/"
 >
   <Hero />
@@ -24,5 +25,5 @@ import { faqs } from '../data/faqs';
   <WorkGallery items={galleryItems} />
   <FaqSection items={faqs} />
   <ContactSection />
+  <BusinessInfoSection />
 </BaseLayout>
-

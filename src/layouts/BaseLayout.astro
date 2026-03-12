@@ -1,7 +1,7 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title?: string;
@@ -10,14 +10,63 @@ interface Props {
 }
 
 const {
-  title = 'DugulásSegély – 0–24 duguláselhárítás Budapesten',
-  description = 'Gyors, megbízható duguláselhárítás Budapesten és környékén, azonnali kiszállással, rejtett költségek nélkül.',
+  title = "DugulásSegély – 0-24 duguláselhárítás Budapesten",
+  description = "Gyors, megbízható duguláselhárítás Budapesten és környékén, azonnali kiszállással, rejtett költségek nélkül.",
   canonical,
 } = Astro.props as Props;
 
 const url = canonical ?? Astro.url.href;
-const siteName = 'DugulásSegély';
-const ogImage = '/og-default.jpg';
+const siteName = "DugulásSegély – Duguláselhárítás 0-24";
+const ogImage =
+  "/images/work/dugulassegely-kameras-lefolyo-vizsgalat-1600.webp";
+const logoUrl = "https://dugulassegely.hu/images/logo/dugulassegely-logo.png";
+const ogImageUrl = `https://dugulassegely.hu${ogImage}`;
+const isHome = Astro.url.pathname === "/";
+
+const businessSchema = isHome
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Plumber",
+      "@id": "https://dugulassegely.hu/#plumber",
+      name: "DugulásSegély – Duguláselhárítás 0-24",
+      url,
+      telephone: "+36 30 538 2048",
+      description,
+      image: ogImageUrl,
+      logo: logoUrl,
+      areaServed: [
+        "Budapest, Magyarország",
+        "Érd, Magyarország",
+        "Budaörs, Magyarország",
+        "Fót, Magyarország",
+        "Gyál, Magyarország",
+        "Vecsés, Magyarország",
+        "Dunakeszi, Magyarország",
+        "Mogyoród, Magyarország",
+        "Szentendre, Magyarország",
+        "Dunaharaszti, Magyarország",
+        "Halásztelek, Magyarország",
+        "Törökbálint, Magyarország",
+        "Szigetszentmiklós, Magyarország",
+      ],
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+          ],
+          opens: "00:00",
+          closes: "23:59",
+        },
+      ],
+    }
+  : undefined;
 ---
 
 <html lang="hu">
@@ -26,7 +75,7 @@ const ogImage = '/og-default.jpg';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#0F172A" />
+    <meta name="theme-color" content="#F3F6FC" />
 
     <title>{title}</title>
 
@@ -37,22 +86,51 @@ const ogImage = '/og-default.jpg';
     <meta property="og:type" content="website" />
     <meta property="og:url" content={url} />
     <meta property="og:site_name" content={siteName} />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={ogImageUrl} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    {
+      businessSchema && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(businessSchema)}
+        />
+      )
+    }
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-chrome-192x192.png"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B508ZVZSRB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-B508ZVZSRB");
+    </script>
   </head>
-  <body class="bg-[#0F172A] text-slate-50 antialiased">
+  <body class="bg-[var(--ds-bg)] text-[var(--ds-text-secondary)] antialiased">
     <Header />
-    <main class="min-h-[60vh] bg-gradient-to-b from-[#020617] via-[#020617] to-[#020617]">
+    <main class="min-h-[60vh] bg-[var(--ds-section)]">
       <slot />
     </main>
     <Footer />
   </body>
 </html>
-

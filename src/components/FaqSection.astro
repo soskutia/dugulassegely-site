@@ -10,31 +10,31 @@ const { items } = Astro.props as Props;
 
 <section
   id="gyik"
-  class="border-b border-slate-800 bg-[#020617]"
+  class="border-b border-[var(--ds-border-subtle)] bg-[var(--ds-section)]"
   aria-labelledby="gyik-heading"
 >
   <div class="mx-auto max-w-3xl px-4 py-12 md:py-16">
     <header class="mb-6 space-y-2 text-center">
-      <h2 id="gyik-heading" class="text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl">
+      <h2 id="gyik-heading" class="text-2xl font-semibold tracking-tight text-slate-900 md:text-3xl">
         Gyakori kérdések
       </h2>
-      <p class="text-sm text-slate-300">
+      <p class="text-sm text-[var(--ds-text-secondary)]">
         Összegyűjtöttem a legfontosabb kérdéseket a duguláselhárítással kapcsolatban.
       </p>
     </header>
     <div class="space-y-3">
       {items.map((faq) => (
-        <details class="group rounded-xl border border-slate-800 bg-slate-900/70 px-4 py-3">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium text-slate-50">
+        <details class="group rounded-xl border border-[var(--ds-border-subtle)] bg-[var(--ds-surface)] px-4 py-3 transition-colors transition-shadow hover:border-[var(--ds-border-default)] hover:bg-[var(--ds-surface-soft)] group-open:border-[var(--ds-primary)] group-open:bg-[var(--ds-surface-soft)] shadow-[var(--ds-shadow-soft)]">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium text-[var(--ds-text-primary)]">
             <span>{faq.question}</span>
-            <span class="text-xs text-slate-400 group-open:hidden" aria-hidden="true">
+            <span class="text-xs text-[var(--ds-text-muted)] group-open:hidden" aria-hidden="true">
               Megnyitás
             </span>
-            <span class="hidden text-xs text-slate-400 group-open:inline" aria-hidden="true">
+            <span class="hidden text-xs text-[var(--ds-text-muted)] group-open:inline" aria-hidden="true">
               Bezárás
             </span>
           </summary>
-          <div class="mt-2 text-sm leading-relaxed text-slate-300">
+          <div class="mt-2 text-sm leading-relaxed text-[var(--ds-text-secondary)]">
             {faq.answer}
           </div>
         </details>

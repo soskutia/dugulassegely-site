@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dugulassegely.hu/sitemap.xml

@@ -3,7 +3,7 @@
 
 <section
   id="kapcsolat"
-  class="border-b border-slate-800 bg-[#020617]"
+  class="border-b border-[var(--ds-border-subtle)] bg-[var(--ds-section)]"
   aria-labelledby="kapcsolat-heading"
 >
   <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
@@ -13,15 +13,15 @@
       <div class="space-y-4">
         <h2
           id="kapcsolat-heading"
-          class="text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl"
+          class="text-2xl font-semibold tracking-tight text-slate-900 md:text-3xl"
         >
           Kérjen visszahívást vagy ajánlatot
         </h2>
-        <p class="text-sm text-slate-300">
+        <p class="text-sm text-[var(--ds-text-secondary)]">
           Írja le röviden a problémát, és visszahívom. Minél pontosabb információt ad, annál
           gyorsabban és pontosabban tudok segíteni.
         </p>
-        <ul class="space-y-1 text-sm text-slate-300">
+        <ul class="space-y-1 text-sm text-[var(--ds-text-secondary)]">
           <li>
             • Röviden írja le, hol jelentkezik a dugulás (WC, mosogató, fürdő, pince).
           </li>
@@ -30,14 +30,14 @@
             • Ha már próbált valamit (pumpa, vegyszer), azt is érdemes megemlíteni.
           </li>
         </ul>
-        <p class="text-xs text-slate-500">
+        <p class="text-xs text-[var(--ds-text-muted)]">
           A kapcsolatfelvételi űrlap a Web3Forms szolgáltatást használja. Az adatok kezelését az
           Adatkezelési tájékoztató részletezi.
         </p>
       </div>
 
       <div
-        class="rounded-2xl border border-slate-800 bg-slate-900/80 p-5 shadow-[0_16px_40px_rgba(15,23,42,0.9)]"
+        class="rounded-2xl border border-[var(--ds-border-default)] bg-[var(--ds-surface)] p-5 shadow-[var(--ds-shadow-elevated)]"
       >
         <form
           id="contact-form"
@@ -73,7 +73,7 @@
             <div class="space-y-1">
               <label
                 for="name"
-                class="block text-xs font-medium uppercase tracking-[0.16em] text-slate-300"
+                class="block text-xs font-medium uppercase tracking-[0.16em] text-[var(--ds-text-muted)]"
               >
                 Név
               </label>
@@ -83,14 +83,14 @@
                 type="text"
                 required
                 autocomplete="name"
-                class="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-[#2563EB]"
+                class="ds-focus-ring w-full rounded-xl border border-[var(--ds-border-subtle)] bg-white px-3 py-2 text-sm text-[var(--ds-text-primary)] outline-none ring-0 transition placeholder:text-[var(--ds-text-muted)] focus:border-[var(--ds-primary)]"
                 placeholder="Teljes neve"
               />
             </div>
             <div class="space-y-1">
               <label
                 for="phone"
-                class="block text-xs font-medium uppercase tracking-[0.16em] text-slate-300"
+                class="block text-xs font-medium uppercase tracking-[0.16em] text-[var(--ds-text-muted)]"
               >
                 Telefon
               </label>
@@ -100,7 +100,7 @@
                 type="tel"
                 required
                 autocomplete="tel"
-                class="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-[#2563EB]"
+                class="ds-focus-ring w-full rounded-xl border border-[var(--ds-border-subtle)] bg-white px-3 py-2 text-sm text-[var(--ds-text-primary)] outline-none ring-0 transition placeholder:text-[var(--ds-text-muted)] focus:border-[var(--ds-primary)]"
                 placeholder="+36…"
               />
             </div>
@@ -109,7 +109,7 @@
           <div class="space-y-1">
             <label
               for="email"
-              class="block text-xs font-medium uppercase tracking-[0.16em] text-slate-300"
+              class="block text-xs font-medium uppercase tracking-[0.16em] text-[var(--ds-text-muted)]"
             >
               E-mail
             </label>
@@ -119,7 +119,7 @@
               type="email"
               required
               autocomplete="email"
-              class="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-[#2563EB]"
+              class="ds-focus-ring w-full rounded-xl border border-[var(--ds-border-subtle)] bg-white px-3 py-2 text-sm text-[var(--ds-text-primary)] outline-none ring-0 transition placeholder:text-[var(--ds-text-muted)] focus:border-[var(--ds-primary)]"
               placeholder="nev@email.hu"
             />
           </div>
@@ -127,7 +127,7 @@
           <div class="space-y-1">
             <label
               for="message"
-              class="block text-xs font-medium uppercase tracking-[0.16em] text-slate-300"
+              class="block text-xs font-medium uppercase tracking-[0.16em] text-[var(--ds-text-muted)]"
             >
               Üzenet
             </label>
@@ -136,19 +136,19 @@
               name="message"
               required
               rows="4"
-              class="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-[#2563EB]"
+              class="ds-focus-ring w-full rounded-xl border border-[var(--ds-border-subtle)] bg-white px-3 py-2 text-sm text-[var(--ds-text-primary)] outline-none ring-0 transition placeholder:text-[var(--ds-text-muted)] focus:border-[var(--ds-primary)]"
               placeholder="Röviden írja le a problémát és a címet (kerület, utca)..."
             ></textarea>
           </div>
 
-          <div class="space-y-1 text-[0.7rem] text-slate-500">
+          <div class="space-y-1 text-[0.7rem] text-slate-900">
             <div class="flex items-start gap-2">
               <input
                 id="terms"
                 name="terms"
                 type="checkbox"
                 required
-                class="mt-0.5 h-3.5 w-3.5 rounded border-slate-600 bg-slate-900 text-[#2563EB]"
+                class="mt-0.5 h-3.5 w-3.5 rounded border-[var(--ds-border-default)] bg-white text-[var(--ds-primary)]"
               />
               <label for="terms" class="leading-snug">
                 Elfogadom az{" "}
@@ -176,7 +176,7 @@
 
           <p
             id="contact-status"
-            class="mt-1 text-xs text-slate-400"
+            class="mt-1 text-xs text-[var(--ds-text-muted)]"
             role="status"
             aria-live="polite"
           ></p>
@@ -184,7 +184,7 @@
           <button
             id="contact-submit"
             type="submit"
-            class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-slate-600 bg-slate-900/60 px-5 py-3 text-[0.78rem] font-medium uppercase tracking-[0.16em] text-slate-100 transition hover:border-slate-400"
+            class="ds-focus-ring inline-flex w-full items-center justify-center gap-2 rounded-full border border-[var(--ds-primary)] bg-[var(--ds-primary)] px-5 py-3 text-[0.78rem] font-medium uppercase tracking-[0.16em] text-white transition hover:bg-[var(--ds-primary-hover)] active:translate-y-[1px]"
           >
             <span aria-hidden="true" class="flex h-5 w-5 items-center justify-center">
               <svg
@@ -209,13 +209,13 @@
 
   <div
     id="contact-success"
-    class="fixed inset-0 z-40 hidden items-center justify-center bg-black/70 px-4"
+    class="fixed inset-0 z-40 hidden items-center justify-center bg-[var(--ds-overlay)] px-4"
   >
     <div
       role="dialog"
       aria-modal="true"
       aria-labelledby="contact-success-title"
-      class="max-w-sm rounded-2xl border border-emerald-500/40 bg-slate-900 p-5 text-sm text-slate-100 shadow-[0_24px_60px_rgba(0,0,0,0.7)]"
+      class="max-w-sm rounded-2xl border border-emerald-500/40 bg-[var(--ds-surface)] p-5 text-sm text-slate-900 shadow-[var(--ds-shadow-elevated)]"
     >
       <h2
         id="contact-success-title"
@@ -223,13 +223,13 @@
       >
         Köszönöm a megkeresést!
       </h2>
-      <p class="text-sm text-slate-200">
+      <p class="text-sm text-slate-800">
         Az üzenet megérkezett, hamarosan visszahívom a megadott telefonszámon.
       </p>
       <button
         type="button"
         id="contact-success-close"
-        class="mt-4 inline-flex items-center justify-center rounded-full border border-slate-600 bg-slate-900/60 px-4 py-2 text-xs font-medium uppercase tracking-[0.16em] text-slate-100 hover:border-slate-400"
+        class="mt-4 inline-flex items-center justify-center rounded-full border border-[var(--ds-primary)] bg-white px-4 py-2 text-xs font-medium uppercase tracking-[0.16em] text-[var(--ds-primary)] hover:bg-[var(--ds-primary-soft)]"
       >
         Rendben
       </button>
