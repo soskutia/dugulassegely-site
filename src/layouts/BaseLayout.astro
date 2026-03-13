@@ -34,6 +34,15 @@ const businessSchema = isHome
       description,
       image: ogImageUrl,
       logo: logoUrl,
+      priceRange: "$$",
+      serviceType: [
+        "Duguláselhárítás",
+        "Lefolyótisztítás",
+        "WC duguláselhárítás",
+        "Mosogató duguláselhárítás",
+        "Kamerás csővizsgálat",
+        "Csatornatisztítás",
+      ],
       areaServed: [
         "Budapest, Magyarország",
         "Érd, Magyarország",
@@ -48,6 +57,15 @@ const businessSchema = isHome
         "Halásztelek, Magyarország",
         "Törökbálint, Magyarország",
         "Szigetszentmiklós, Magyarország",
+      ],
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+36 30 538 2048",
+          contactType: "customer service",
+          areaServed: "HU",
+          availableLanguage: ["hu", "en"],
+        },
       ],
       openingHoursSpecification: [
         {
